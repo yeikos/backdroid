@@ -1,0 +1,141 @@
+<!DOCTYPE html><html>
+
+	<head>
+
+		<meta charset="utf-8">
+
+		<title>Backdroid</title>
+
+		<script type="text/javascript" src="/js/jquery.min.js"></script>
+		<script type="text/javascript" src="/js/jquery.request.js"></script>
+		<script type="text/javascript" src="/js/jquery.backdroid.js"></script>
+
+		<link href="/css/bootstrap.css" rel="stylesheet" />
+		<link href="/css/bootstrap-responsive.css" rel="stylesheet" />
+		<link href="/css/styles.css" rel="stylesheet" />
+
+		<script type="text/javascript">
+
+			$.backdroid({
+
+				// Servidor WebSocket
+
+				ws_server: 'http://127.0.0.1:8080',
+
+				// Intervenciones de las respuestas de los comandos
+
+				command: {
+
+					// Localización
+
+					location: function(request, response, $container) {
+
+						var location;
+
+						// Cuando recibamos una localización correcta
+
+						if ($.type(response) == 'object' && $.type((location = response.location)) == 'array')
+
+							// Reemplazamos la respuesta ofrecida por un enlace a Google Maps
+
+							$container.html(
+
+								$('<a target="_blank"></a>').text((location = location.join(', '))).attr('href', 'https://maps.google.es/maps?q=' + location)
+
+							);
+
+					}
+
+				}
+
+			});
+
+		</script>
+
+	</head>
+
+	<body>
+
+		<div class="navbar navbar-fixed-top">
+
+			<div class="navbar-inner">
+
+				<div class="container">
+
+				<a class="brand" href="#">Backdroid</a>
+
+				</div>
+
+			</div>
+
+		</div>
+
+		<div class="container">
+
+			<div class="hero-unit no-authed" id="login">
+
+				<h1>Bienvenido a Backdroid</h1>
+
+				<p>El autor de esta aplicación no se hace responsable de los daños que ésta pueda causar.</p>
+			
+				<div class="form-inline">
+
+					<h3>Identificación</h3>
+
+					<form action="/emit/login" method="GET">
+
+						<input type="password" name="password" placeholder="Contraseña" class="span2" />
+
+						<input type="submit" value="Enviar" class="btn btn-primary" />
+
+					</form>
+
+				</div>
+
+			</div>
+
+			<div class="authed hide" id="setCommand">
+
+				<form action="/emit/setCommand" method="GET" class="form-inline">
+
+					<input type="hidden" name="action" value="set" />
+
+					<input id="setCommandName" type="text" name="command" placeholder="Comando"/>
+
+					<input id="setCommandValue" type="text" name="value" size="60" placeholder="Valor" /> 
+
+					<textarea id="setCommandValueExpanded" placeholder="Valor" class="hide"></textarea>
+
+					<label class="checkbox"><input type="checkbox" name="json" />JSON</label>
+
+					<label class="checkbox"><input type="checkbox" name="expand" />Expandir </label>
+
+					<input type="submit" value="Enviar" class="btn" />
+
+				</form>
+
+				<div id="online">Última conexión: <span>-</span></div>
+
+				<div id="commands"></div>
+
+			</div>
+
+			<hr>
+
+			<footer>
+
+				<p>
+
+					Copyright 2012 - 
+					<a href="http://www.yeikos.com" target="_blank">http://www.yeikos.com</a> - 
+					<a href="https://github.com/yeikos/backdroid" target="_blank">https://github.com/yeikos/backdroid</a>
+
+				</p>
+
+			</footer>
+
+		</div>
+
+	</body>
+
+</html>

