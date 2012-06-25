@@ -6,7 +6,7 @@ backdroid.createCommandServer({
 
 	port: 8888,
 	password: 'secret',
-	encryption_password: 'secret'
+	encryption_password: 'secret123'
 	
 });
 

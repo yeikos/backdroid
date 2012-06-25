@@ -93,9 +93,9 @@ var Public = {
 
 			throw 'Error backdroid.createPanelServer: option.ws_port';
 
-		if (typeof option.ws_encryption_password != 'string' || !option.ws_encryption_password.length)
+		/*if (typeof option.ws_encryption_password != 'string' || !option.ws_encryption_password.length)
 
-			throw 'Error backdroid.createPanelServer: option.ws_encryption_password';
+			throw 'Error backdroid.createPanelServer: option.ws_encryption_password';*/
 
 		// Servidor HTTP
 

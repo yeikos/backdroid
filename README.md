@@ -16,13 +16,13 @@ Features
 How to install?
 --------------------------------------
 
-1º Download and install NodeJS (http://nodejs.org/).
-2º Install backdroid with npm by the console (npm install -g backdroid).
-3º Download and install Onx App for Android (https://play.google.com/store/apps/details?id=com.microsoft.onx.app).
-4º Login in https://www.onx.ms/.
-5º Download backdroid proyect.
-6º Copy client.js source code (https://github.com/yeikos/nodejs.backdroid/blob/master/client.js) and paste it into https://www.onx.ms/#!createScriptPage (new rule).
-7º Go to examples project folder and launch each example by the console (node SCRIPTNAME).
+  - Download and install NodeJS (http://nodejs.org/).
+  - Install backdroid with npm by the console (npm install -g backdroid).
+  - Download and install Onx App for Android (https://play.google.com/store/apps/details?id=com.microsoft.onx.app).
+  - Login in https://www.onx.ms/.
+  - Download backdroid proyect (https://github.com/yeikos/backdroid/zipball/master).
+  - Copy client.js source code (https://github.com/yeikos/backdroid/blob/master/client.js) and paste it into https://www.onx.ms/#!createScriptPage (new rule).
+  - Go to examples project folder and launch each example by the console (node SCRIPTNAME).
 
 Example
 --------------------------------------
