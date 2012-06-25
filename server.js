@@ -1,5 +1,5 @@
 /*!
- * @name Backdroid v1.0.0 Beta
+ * @name Backdroid v1.0.1 Beta
  * @autor yeikos
  
  * Copyright 2012 - http://www.yeikos.com - https://github.com/yeikos/backdroid

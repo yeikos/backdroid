@@ -1,4 +1,4 @@
-Backdroid v1.0.0 BETA
+Backdroid v1.0.1 BETA
 ==================================================
 
 What is this?
